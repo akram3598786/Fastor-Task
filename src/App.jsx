@@ -4,7 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Hompage from './Components/Home/Homepage';
 import Login from './Components/Authentication/Login';
 import Product from './Components/Product/Product';
-import Signup from './Components/Authentication/Signup';
+import OTP from './Components/Authentication/OTP/OTP';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Hompage/>}/>
         <Route path='/' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/verify' element={<OTP/>}/>
         <Route path='/product:prodId' element={<Product/>}/>
       </Routes>
     </div>

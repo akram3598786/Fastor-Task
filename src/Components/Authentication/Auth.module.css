@@ -1,0 +1,23 @@
+
+.MainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.SubmitBtn{
+    background: #FF6D6A;
+    width: 60%;
+    margin: auto;
+    color: white;
+}
+.form{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.smlabel{
+    font-weight: 100;
+
+}
