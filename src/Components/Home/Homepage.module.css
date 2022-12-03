@@ -1,7 +1,36 @@
 .ProdctsDiv{
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 100%;
 }
 .container{
   
+}
+.red{
+    color: red;
+}
+
+/* Restaurant Card CSS */
+.RestaurantCard {
+    /* border: 2px solid black; */
+    padding: 5px 3px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    column-gap: 10px;
+}
+.left_of_card{
+    /* background-color: green; */
+}
+.left_of_card > div{
+    width: 200px;
+    height: 200px;
+}
+.left_of_card > div >img{
+    width: 185px;
+    height: 185px;
+    border-radius: 30px;
+}
+
+.right_of_card{
+  /* background-color: red; */
 }

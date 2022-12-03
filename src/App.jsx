@@ -13,7 +13,7 @@ function App() {
         <Route path='/home' element={<Hompage/>}/>
         <Route path='/' element={<Login/>}/>
         <Route path='/verify' element={<OTP/>}/>
-        <Route path='/product:prodId' element={<Product/>}/>
+        <Route path='/:prodId' element={<Product/>}/>
       </Routes>
     </div>
   );
