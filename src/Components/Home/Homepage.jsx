@@ -178,6 +178,8 @@ export default function Hompage() {
     const getRestaurants = () => {
 
         // let url = 'https://staging.fastor.in/v1/m/restaurant?city_id=118&&';
+        let refershedToken = localStorage.getItem("token");
+
         let url = 'https://staging.fastor.in/v1/m/restaurant';
        /* axios.get(url).
             then((res) => console.log(res.data)).
