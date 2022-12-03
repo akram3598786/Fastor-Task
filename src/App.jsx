@@ -5,10 +5,12 @@ import Hompage from './Components/Home/Homepage';
 import Login from './Components/Authentication/Login';
 import Product from './Components/Product/Product';
 import OTP from './Components/Authentication/OTP/OTP';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Routes>
         <Route path='/home' element={<Hompage/>}/>
         <Route path='/' element={<Login/>}/>

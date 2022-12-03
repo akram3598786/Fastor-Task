@@ -1,0 +1,14 @@
+
+
+.NavDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 180, 41, 0.959);
+    padding: 10px 0px;
+}
+
+.NavDiv > img{
+    width: 20%;
+    height: 20%;
+}
