@@ -10,6 +10,7 @@ export default function OTP() {
     useEffect(() => {
         alert("OTP : 123456");
     }, []);
+
     const [dig1, setdig1] = useState("");
     const [dig2, setdig2] = useState("");
     const [dig3, setdig3] = useState("");
@@ -23,22 +24,27 @@ export default function OTP() {
     const submitOTP = () => {
         let mobile = localStorage.getItem("mobile");
         let url = 'https://staging.fastor.in/v1/pwa/user/login';
-        console.log(mobile)
+
+
         let payload = {
             phone: mobile,
-            otp: "123456",
+            otp: dig1 + dig2 + dig3 + dig4 + dig5 + dig6,
             dial_code: "+91"
         }
-        axios.post(url, payload).
-            then((res) => {
-                if (res.data.status_code == 200) {
-                   let token  = res.data.data.refresh_token;
-                   localStorage.setItem("token", token);
-                    alert("LoggedIn Successfully")
-                }
-                else alert("Something went wrong");
-            }).catch((err) => console.log(err)).
-            finally((res) => navigate("/home"));
+        if (payload.otp === "123456") {
+            axios.post(url, payload).
+                then((res) => {
+                    if (res.data.status_code == 200) {
+                        let token = res.data.data.token;
+                        localStorage.setItem("token", token);
+                        alert("LoggedIn Successfully");
+                        navigate("/home");
+                    }
+                    else alert("Something went wrong");
+                }).catch((err) => console.log(err))
+        } else {
+            alert("Invalid OTP")
+        }
     }
 
     return (
